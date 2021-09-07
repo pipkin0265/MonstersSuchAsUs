@@ -41,9 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Player.cs" />
+    <Compile Include="Adventures\Models\Location.cs" />
+    <Compile Include="Adventures\Models\Quest.cs" />
+    <Compile Include="Entities\Models\LivingCreature.cs" />
+    <Compile Include="Entities\Models\Monster.cs" />
+    <Compile Include="Entities\Models\Player.cs" />
+    <Compile Include="Items\HealingPotion.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\GameSession.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
