@@ -46,9 +46,17 @@
     <Compile Include="Entities\Models\LivingCreature.cs" />
     <Compile Include="Entities\Models\Monster.cs" />
     <Compile Include="Entities\Models\Player.cs" />
+    <Compile Include="Items\BookofKnowledge.cs" />
+    <Compile Include="Items\Cellphone.cs" />
     <Compile Include="Items\HealingPotion.cs" />
     <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Ring.cs" />
+    <Compile Include="Items\Shield.cs" />
+    <Compile Include="Items\StrengthPotion.cs" />
+    <Compile Include="Items\StunGas.cs" />
+    <Compile Include="Items\UltimaWeapon.cs" />
     <Compile Include="Items\Weapon.cs" />
+    <Compile Include="Items\Whistle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
