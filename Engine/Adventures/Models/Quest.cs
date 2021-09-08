@@ -13,5 +13,14 @@ namespace Engine.Adventures.Models
         public string Description { get; set; }
         public int RewardExperiencePoints { get; set; }
         public int RewardGold { get; set; }
+
+        public Quest(int id, string name, string desctiption, int rewardExperiencePoints, int rewardGold)
+        {
+            ID = id;
+            Name = name;
+            Description = desctiption;
+            RewardExperiencePoints = rewardExperiencePoints;
+            RewardGold = rewardGold;
+        }
     }
 }
