@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="Adventures\Models\Location.cs" />
     <Compile Include="Adventures\Models\Quest.cs" />
+    <Compile Include="Create, Load, Save\CreatePlayer.cs" />
     <Compile Include="Entities\Models\LivingCreature.cs" />
     <Compile Include="Entities\Models\Monster.cs" />
     <Compile Include="Entities\Models\Player.cs" />
+    <Compile Include="Entities\Models\SaveData.cs" />
     <Compile Include="Items\BookofKnowledge.cs" />
     <Compile Include="Items\Cellphone.cs" />
     <Compile Include="Items\HealingPotion.cs" />
