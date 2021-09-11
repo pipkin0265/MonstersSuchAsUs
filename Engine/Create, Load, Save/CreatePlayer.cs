@@ -88,6 +88,7 @@ namespace Engine.Create__Load__Save
                 }
             }
 
+
             Console.ForegroundColor = ConsoleColor.White;
             Player.player = new Player(name, className, raceName, gold, hp, hp, false, true);
             Console.WriteLine("Creating character data, please wait...");

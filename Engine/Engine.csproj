@@ -44,6 +44,8 @@
     <Compile Include="Adventures\Models\Location.cs" />
     <Compile Include="Adventures\Models\Quest.cs" />
     <Compile Include="Create, Load, Save\CreatePlayer.cs" />
+    <Compile Include="Create, Load, Save\NewPlayer.cs" />
+    <Compile Include="Entities\Models\ListBuilder.cs" />
     <Compile Include="Entities\Models\LivingCreature.cs" />
     <Compile Include="Entities\Models\Monster.cs" />
     <Compile Include="Entities\Models\Player.cs" />
@@ -59,6 +61,8 @@
     <Compile Include="Items\UltimaWeapon.cs" />
     <Compile Include="Items\Weapon.cs" />
     <Compile Include="Items\Whistle.cs" />
+    <Compile Include="Locations\Room.cs" />
+    <Compile Include="Password\Password.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
