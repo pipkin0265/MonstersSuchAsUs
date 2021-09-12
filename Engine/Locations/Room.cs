@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Entities.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Engine.Locations
         private int _id;
         private string roomName;
         private string roomDescript;
-        // Monsters
+        private Monster _monsters;
         private int _locationNorth;
         private int _locationEast;
         private int _locationSouth;
@@ -21,13 +22,12 @@ namespace Engine.Locations
         public int ID { get { return _id; } set { _id = value; } }
         public string RoomName { get { return roomName; } set { roomName = value; } }
         public string RoomDescription { get { return roomDescript; } set { roomDescript = value; } }
-        
-        // Monsters
-
+        public Monster RoomMonsters { get { return _monsters; } set { _monsters = value; } }
         public int LocationToNorth { get { return _locationNorth; } set { _locationNorth = value; } }
         public int LocationToEast { get { return _locationEast; } set { _locationEast = value; } }
         public int LocationToSouth { get { return _locationSouth;  } set { _locationSouth = value; } }
         public int LocationToWest { get { return _locationWest; } set { _locationWest = value; } }
+        public List<Monster> Mob = new List<Monster>();
 
 
         public Room(int id, string name, string descript, int exit1, int exit2, int exit3, int exit4)

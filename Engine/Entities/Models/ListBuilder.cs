@@ -9,10 +9,67 @@ namespace Engine.Entities.Models
 {
     public static class ListBuilder
     {
-        private static string[] NextLine(StreamReader reader)
+        private static string[] ScanLine(StreamReader reader)
         {
             string[] line = reader.ReadLine().Split(' ');
             return line;
+        }
+
+        public static void BuildObjects()
+        {
+            // Build Monster
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/MonstersList.txt"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    int id = int.Parse(ScanLine(reader)[1]);
+
+                    string name = ScanLine(reader)[1];
+
+                    int xp = int.Parse(ScanLine(reader)[1]);
+
+                    int armor = int.Parse(ScanLine(reader)[1]);
+
+                    int gold = int.Parse(ScanLine(reader)[1]);
+
+                    string damage = ScanLine(reader)[1];
+
+                    int baseAttack = int.Parse(ScanLine(reader)[1]);
+
+                    int currentHitpoints = int.Parse(ScanLine(reader)[1]);
+
+                    int maximumHitpoints = int.Parse(ScanLine(reader)[1]);
+
+                    bool isDead = bool.Parse(ScanLine(reader)[1]);
+
+                    bool canBeAttacked = bool.Parse(ScanLine(reader)[1]);
+
+               //   World.Monsters.Add(new Monster(id, name, xp, gold, armor, damage, baseAttack, currentHitpoints, maximumHitpoints, isDead, canBeAttacked));
+
+                }
+            }
+
+            // Build Rooms
+            using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Rooms.txt"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    int id = int.Parse(reader.ReadLine());
+                    string name = reader.ReadLine();
+                    string descript = reader.ReadLine();
+                    int exit1 = int.Parse(reader.ReadLine());
+                    int exit2 = int.Parse(reader.ReadLine());
+                    int exit3 = int.Parse(reader.ReadLine());
+                    int exit4 = int.Parse(reader.ReadLine());
+                    int idMonster = int.Parse(reader.ReadLine());
+                 // int idRoomLoot = int.Parse(reader.ReadLine());
+
+                 // World.Location.Add(new Room(id, name, descript, exit1, exit2, exit3, exit4, idMonster));
+                    
+                }
+            }
+
+            // Build Weapons
         }
     }
 }

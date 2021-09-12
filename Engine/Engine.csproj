@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adventures\Models\Location.cs" />
-    <Compile Include="Adventures\Models\Quest.cs" />
+    <Compile Include="Adventures\Admin\Help.cs" />
+    <Compile Include="Adventures\Admin\PlayerMovement.cs" />
+    <Compile Include="Entities\Models\Movement.cs" />
+    <Compile Include="Locations\CurrentLocationClass.cs" />
+    <Compile Include="Locations\Location.cs" />
+    <Compile Include="Locations\Quest.cs" />
     <Compile Include="Create, Load, Save\CreatePlayer.cs" />
     <Compile Include="Create, Load, Save\NewPlayer.cs" />
     <Compile Include="Entities\Models\ListBuilder.cs" />
@@ -50,17 +54,21 @@
     <Compile Include="Entities\Models\Monster.cs" />
     <Compile Include="Entities\Models\Player.cs" />
     <Compile Include="Entities\Models\SaveData.cs" />
-    <Compile Include="Items\BookofKnowledge.cs" />
-    <Compile Include="Items\Cellphone.cs" />
-    <Compile Include="Items\HealingPotion.cs" />
-    <Compile Include="Items\Item.cs" />
-    <Compile Include="Items\Ring.cs" />
-    <Compile Include="Items\Shield.cs" />
-    <Compile Include="Items\StrengthPotion.cs" />
-    <Compile Include="Items\StunGas.cs" />
-    <Compile Include="Items\UltimaWeapon.cs" />
-    <Compile Include="Items\Weapon.cs" />
-    <Compile Include="Items\Whistle.cs" />
+    <Compile Include="Entities\Models\World.cs" />
+    <Compile Include="Items, Weapons, Treasure\BookofKnowledge.cs" />
+    <Compile Include="Items, Weapons, Treasure\Cellphone.cs" />
+    <Compile Include="Items, Weapons, Treasure\HealingPotion.cs" />
+    <Compile Include="Items, Weapons, Treasure\IEquip.cs" />
+    <Compile Include="Items, Weapons, Treasure\IItem.cs" />
+    <Compile Include="Items, Weapons, Treasure\Item.cs" />
+    <Compile Include="Items, Weapons, Treasure\IWeapon.cs" />
+    <Compile Include="Items, Weapons, Treasure\Ring.cs" />
+    <Compile Include="Items, Weapons, Treasure\Shield.cs" />
+    <Compile Include="Items, Weapons, Treasure\StrengthPotion.cs" />
+    <Compile Include="Items, Weapons, Treasure\StunGas.cs" />
+    <Compile Include="Items, Weapons, Treasure\UltimaWeapon.cs" />
+    <Compile Include="Items, Weapons, Treasure\Weapon.cs" />
+    <Compile Include="Items, Weapons, Treasure\Whistle.cs" />
     <Compile Include="Locations\Room.cs" />
     <Compile Include="Password\Password.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
