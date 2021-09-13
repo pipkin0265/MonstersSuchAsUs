@@ -1,12 +1,11 @@
-﻿using Engine.Items;
-using Engine.Locations;
+﻿using Engine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Entities.Models
+namespace Engine
 {
     public class Player : LivingCreature
     {

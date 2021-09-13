@@ -1,61 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Engine.Adventures.Models;
-using Engine.Entities.Models;
+using Engine;
 
 namespace MonstersSuchAsUs
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            MakeTitle();
-            Adventure newAdventure = new Adventure();
-            Console.ReadKey();
-                        
-        }
+            #region Start
+            Console.ForegroundColor = ConsoleColor.Magenta;         // Makes text color purple
 
-        public static void MakeTitle()
-        {
-            Console.BackgroundColor = ConsoleColor.DarkMagenta;
-            Console.ForegroundColor = ConsoleColor.White;
+            ListBuilder.BuildObjects();                             // Calling ListBuilder on load to build all our list
 
-            Console.WriteLine("##     ##  #######  ##    ##  ######  ######## ######## ########   ######      ######  ##     ##  ######  ##     ##       ###     ######     ##     ##  ######  ");
-            Console.WriteLine("###   ### ##     ## ###   ## ##    ##    ##    ##       ##     ## ##    ##    ##    ## ##     ## ##    ## ##     ##      ## ##   ##    ##    ##     ## ##    ## ");
-            Console.WriteLine("#### #### ##     ## ####  ## ##          ##    ##       ##     ## ##          ##       ##     ## ##       ##     ##     ##   ##  ##          ##     ## ##       ");
-            Console.WriteLine("## ### ## ##     ## ## ## ##  ######     ##    ######   ########   ######      ######  ##     ## ##       #########    ##     ##  ######     ##     ##  ######  ");
-            Console.WriteLine("##     ## ##     ## ##  ####       ##    ##    ##       ##   ##         ##          ## ##     ## ##       ##     ##    #########       ##    ##     ##       ## ");
-            Console.WriteLine("##     ## ##     ## ##   ### ##    ##    ##    ##       ##    ##  ##    ##    ##    ## ##     ## ##    ## ##     ##    ##     ## ##    ##    ##     ## ##    ## ");
-            Console.WriteLine("##     ##  #######  ##    ##  ######     ##    ######## ##     ##  ######      ######   #######   ######  ##     ##    ##     ##  ######      #######   ######  \n\n");
+            WelcomingScreen welcoming = new WelcomingScreen();      // Welcoming screen
+            welcoming.Welcome();
 
-            Console.WriteLine("                                                                     Press Start To Enter                                                                                      ");
-            Console.ReadKey();
-            Console.Clear();
-        }
+            Console.WriteLine("Need help? Type 'Help' to see commands");
+            Console.WriteLine("");
 
-        public partial class Adventure
-        {
-            private Player _player;
+            CurrentLocationClass.DisplayLocation();
+            Console.WriteLine("");
+            #endregion
 
-            public Adventure()
+            #region Loop
+            // Infinite loop
+            while (true)
             {
-                                
-                _player = new Player();
+                Console.Write(Player.player.CurrentHitPoints + "/" + Player.player.MaximumHitPoints + "HP" + " > ");
 
-                _player.CurrentHitPoints = 10;
-                _player.MaximumHitPoints = 10;
-                _player.Gold = 20;
-                _player.ExperiencePoints = 0;
-                _player.Level = 1;
+                string playerInput = Console.ReadLine();
 
-                Console.WriteLine("Hit Points: " + _player.CurrentHitPoints);
-                Console.WriteLine("Gold: " + _player.Gold);
-                Console.WriteLine("Experience: " + _player.ExperiencePoints);
-                Console.WriteLine("Level: " + _player.Level);
+                if (string.IsNullOrEmpty(playerInput))
+                {
+                    continue;
+                }
+
+                string exitInput = playerInput.ToLower();
+
+                if (exitInput == "exit")
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Saving your character, will close when finish. Please wait...");
+                    // Save
+                    break;
+                }
+
+                // Parse
+                Parse(exitInput);
+            }
+            #endregion
+        }
+
+        private static void PlayerChangedProp(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "CurrentLocation")
+            {
+                CurrentLocationClass.DisplayLocation();
             }
         }
+
+        private static void Parse(string input)
+        {
+            Command.CommandGo(input, Player.player);
+
+            Console.WriteLine("");
+        }
+        
+
     }
 }

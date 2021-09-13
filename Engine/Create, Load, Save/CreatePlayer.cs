@@ -1,11 +1,11 @@
-﻿using Engine.Entities.Models;
+﻿using Engine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Create__Load__Save
+namespace Engine
 {
     public static class CreatePlayer
     {
@@ -23,11 +23,11 @@ namespace Engine.Create__Load__Save
             Console.Write("> ");
             name = Console.ReadLine();
 
-            Console.Write("Your name is..." + name);
+            Console.WriteLine("Your name is... " +  name);
 
             while (validClass == false)
             {
-                Console.WriteLine("What class would you like to be" + name + "?");
+                Console.WriteLine("What class would you like to be " + name + "?");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("Solider, Rogue, Scientist, Raider > ");
                 className = Console.ReadLine().ToLower();
@@ -64,7 +64,7 @@ namespace Engine.Create__Load__Save
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("What race would you like to be?");
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("Human, > ");
+                Console.Write("Human, Monster, Machine, or Koala > ");
                 raceName = Console.ReadLine().ToLower();
 
                 if (raceName == "human")
@@ -72,12 +72,17 @@ namespace Engine.Create__Load__Save
                     validRace = true;
                     hp = 100;
                 }
-                else if (raceName == "")
+                else if (raceName == "monster")
+                {
+                    validRace = true;
+                    hp = 100;
+                }
+                else if (raceName == "machine")
                 {
                     validRace = true;
                     hp = 80;
                 }
-                else if (raceName == "")
+                else if (raceName == "koala")
                 {
                     validRace = true;
                     hp = 120;
@@ -90,7 +95,7 @@ namespace Engine.Create__Load__Save
 
 
             Console.ForegroundColor = ConsoleColor.White;
-            Player.player = new Player(name, className, raceName, gold, hp, hp, false, true);
+            Player.player = new Player(name, className, raceName, gold, hp, hp, (Weapon)World.WeaponID(103), false, true);
             Console.WriteLine("Creating character data, please wait...");
             
         }

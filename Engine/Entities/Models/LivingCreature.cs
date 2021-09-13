@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Entities.Models
+namespace Engine
 {
     public class LivingCreature
     {
@@ -17,7 +17,7 @@ namespace Engine.Entities.Models
         public int CurrentHitPoints { get { return currentHitPoints; } set { currentHitPoints = value; } }
         public bool Dead { get { return dead; } set { dead = value; } }
         public bool CanBeAttacked { get { return canBeAttacked; } set { canBeAttacked = value; } }
-        public int MaximumHitPoints { get { return maxHitPoints} set { maxHitPoints = value; } }
+        public int MaximumHitPoints { get { return maxHitPoints; } set { maxHitPoints = value; } }
 
         public LivingCreature(int currentHitPoints, int maxHitPoints, bool dead, bool canBeAttacked)
         {

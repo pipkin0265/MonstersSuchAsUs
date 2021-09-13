@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adventures\Admin\Help.cs" />
-    <Compile Include="Adventures\Admin\PlayerMovement.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\Help.cs" />
+    <Compile Include="Commands\PlayerMovement.cs" />
+    <Compile Include="Create, Load, Save\WelcomingScreen.cs" />
     <Compile Include="Entities\Models\Movement.cs" />
+    <Compile Include="Entities\Models\RandomNumberGen.cs" />
     <Compile Include="Locations\CurrentLocationClass.cs" />
     <Compile Include="Locations\Location.cs" />
     <Compile Include="Locations\Quest.cs" />
@@ -72,6 +75,14 @@
     <Compile Include="Locations\Room.cs" />
     <Compile Include="Password\Password.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TextDocs\MonstersList.txt" />
+    <Content Include="TextDocs\Rooms.txt" />
+    <Content Include="TextDocs\Weapons.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\Admin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

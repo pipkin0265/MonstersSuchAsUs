@@ -1,0 +1,40 @@
+﻿401
+Your base
+A small little base, you built near the long bridge that leads to the hospital, where it all began at.
+1
+-1
+-1
+-1
+-1
+402
+Bridge of Nightmares
+A long bridge leadimg to the hosptial of the dead.
+2
+5
+0
+-1
+0
+403
+Waiting Room
+Littered with bones this room is the first entrance in the Hosptial of Dead.
+3
+-1
+1
+-1
+0
+404
+Nursing Station
+Paper is scattered everywhere in here.
+7
+8
+6
+1
+-1
+405
+ICU Room
+A large room that seems to have a certain aura in the air.
+9
+-1
+-1
+5
+0

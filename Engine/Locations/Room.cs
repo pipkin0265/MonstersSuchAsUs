@@ -1,11 +1,11 @@
-﻿using Engine.Entities.Models;
+﻿using Engine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Locations
+namespace Engine
 {
     public class Room
     {
@@ -30,7 +30,7 @@ namespace Engine.Locations
         public List<Monster> Mob = new List<Monster>();
 
 
-        public Room(int id, string name, string descript, int exit1, int exit2, int exit3, int exit4)
+        public Room(int id, String name, String descript, int exit1, int exit2, int exit3, int exit4, int monsterID)
         {
             this.ID = id;
             this.RoomName = name;
@@ -39,6 +39,23 @@ namespace Engine.Locations
             this.LocationToEast = exit2;
             this.LocationToSouth = exit3;
             this.LocationToWest = exit4;
+
+            // Adds Monsters
+            if (monsterID != 5)
+            {
+                if (monsterID > -1)
+                {
+                    Random rand = new Random();
+
+                    int catchMob = RandomNumberGen.RandomNumber(0, 3); // index
+                    this.RoomMonsters = new Monster(World.Monsters[catchMob]);
+                    this.Mob.Add(RoomMonsters);
+                }
+            }
+            else
+            {
+                this.Mob.Add(World.MonsterID(monsterID));
+            }
         }
     }
 }

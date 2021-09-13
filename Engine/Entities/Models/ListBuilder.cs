@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Engine;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Entities.Models
+namespace Engine
 {
     public static class ListBuilder
     {
@@ -18,7 +19,7 @@ namespace Engine.Entities.Models
         public static void BuildObjects()
         {
             // Build Monster
-            using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/MonstersList.txt"))
+            using (StreamReader reader = File.OpenText(@"../../../Engine/TextDocs/MonstersList.txt"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -44,13 +45,13 @@ namespace Engine.Entities.Models
 
                     bool canBeAttacked = bool.Parse(ScanLine(reader)[1]);
 
-               //   World.Monsters.Add(new Monster(id, name, xp, gold, armor, damage, baseAttack, currentHitpoints, maximumHitpoints, isDead, canBeAttacked));
+                    World.Monsters.Add(new Monster(id, name, xp, gold, armor, damage, baseAttack, currentHitpoints, maximumHitpoints, isDead, canBeAttacked));
 
                 }
             }
 
             // Build Rooms
-            using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Rooms.txt"))
+            using (StreamReader reader = File.OpenText(@"../../../Engine/TextDocs/Rooms.txt"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -62,14 +63,31 @@ namespace Engine.Entities.Models
                     int exit3 = int.Parse(reader.ReadLine());
                     int exit4 = int.Parse(reader.ReadLine());
                     int idMonster = int.Parse(reader.ReadLine());
-                 // int idRoomLoot = int.Parse(reader.ReadLine());
+                 // room loot
 
-                 // World.Location.Add(new Room(id, name, descript, exit1, exit2, exit3, exit4, idMonster));
+                    World.Location.Add(new Room(id, name, descript, exit1, exit2, exit3, exit4, idMonster));
                     
                 }
             }
 
             // Build Weapons
+            using (StreamReader reader = File.OpenText(@"../../../Engine/TextDocs/Weapons.txt"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    int id = int.Parse(reader.ReadLine());
+                    string name = reader.ReadLine();
+                    string pluralName = reader.ReadLine();
+                    string descript = reader.ReadLine();
+                   // cost
+                    string damage = reader.ReadLine();
+                    string type = reader.ReadLine();
+                    bool equip = bool.Parse(reader.ReadLine());
+                    int wearLocation = int.Parse(reader.ReadLine());
+
+                    World.Weapons.Add(new Weapon(id, name, pluralName, descript, damage, type, equip, wearLocation));
+                }
+            }
         }
     }
 }

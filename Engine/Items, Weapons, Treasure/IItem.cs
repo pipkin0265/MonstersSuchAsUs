@@ -1,4 +1,4 @@
-﻿namespace Engine.Items
+﻿namespace Engine
 {
     public interface IItem
     {

@@ -1,0 +1,32 @@
+﻿101
+Sword
+Swords
+A average size rusty sword
+1D4
+Slash
+true
+0
+102
+Dagger
+Daggers
+Short piece of sharp metal
+1D4
+Pierce
+true
+0
+103
+Hand gun
+Dual wield
+A hand gun
+1D6
+Impact
+true
+0
+104
+Auto Rifle
+Dual wield auto rifles
+A great condition AR
+1D8
+Impact
+true
+0

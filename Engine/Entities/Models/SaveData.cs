@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Entities.Models
+namespace Engine
 {
     public static class SaveData
     {

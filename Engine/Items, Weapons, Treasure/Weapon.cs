@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Items
+namespace Engine
 {
     public class Weapon : IItem, IEquip, IWeapon
     {

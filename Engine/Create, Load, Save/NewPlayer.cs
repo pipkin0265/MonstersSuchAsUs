@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Create__Load__Save
+namespace Engine
 {
     public static class NewPlayer
     {
@@ -16,14 +16,14 @@ namespace Engine.Create__Load__Save
 
             while(validInput == false)
             {
-                Console.WriteLine("Are you a new player?");
+                Console.WriteLine("Are you a new player? Yes or No?");
                 Console.Write("> ");
                 userInput = Console.ReadLine();
 
                 if(userInput.ToLower() == "no")
                 {
                     validInput = true;
-                    Console.WriteLine("What is your character's name?");
+                    Console.WriteLine("What was your character's name?");
                     userInput = Console.ReadLine();
                     // Load game
                 }
@@ -35,7 +35,6 @@ namespace Engine.Create__Load__Save
                 else
                 {
                     Console.WriteLine("Not a valid option. Please try again!");
-                    CreatePlayer.CreatePlayerMenu();
                 }
             }
         }

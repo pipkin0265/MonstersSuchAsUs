@@ -1,11 +1,11 @@
-﻿using Engine.Entities.Models;
+﻿using Engine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Locations
+namespace Engine
 {
     public class CurrentLocationClass
     {
