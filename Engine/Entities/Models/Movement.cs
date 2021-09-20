@@ -32,7 +32,7 @@ namespace Engine
         // Moves player to the next room
         public static void MoveToRoom(string input)
         {
-            int move = World.Location.IndexOf(Player.CurrentLocation);
+            int ele = World.Location.IndexOf(Player.CurrentLocation);
             switch (input)
             {
                 case "north":

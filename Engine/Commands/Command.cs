@@ -21,6 +21,7 @@ namespace Engine
             {
                 noun = "";
             }
+            RegularCommands(verb, noun);
 
         }
 

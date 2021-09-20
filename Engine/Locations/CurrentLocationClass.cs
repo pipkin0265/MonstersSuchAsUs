@@ -20,18 +20,21 @@ namespace Engine
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             
-            string exits = "\n|Exits: ";
+            string exits = "\n[Exits: ";
             
             List<string> validExits = new List<string>();
-
             if (Player.CurrentLocation.LocationToNorth != -1)
                 validExits.Add("north");
+
             if (Player.CurrentLocation.LocationToEast != -1)
                 validExits.Add("east");
+
             if (Player.CurrentLocation.LocationToSouth != -1)
                 validExits.Add("south");
+
             if (Player.CurrentLocation.LocationToWest != -1)
                 validExits.Add("west");
+
             if (validExits.Count == 1)
                 exits += validExits[0] + " ";
             else
@@ -44,7 +47,7 @@ namespace Engine
                 }
             }
 
-            Console.WriteLine(exits + "|");
+            Console.WriteLine(exits + "]");
 
             if (Player.CurrentLocation.Mob != null)
             {

@@ -31,16 +31,15 @@ namespace MonstersSuchAsUs
             // Infinite loop
             while (true)
             {
-                Console.Write(Player.player.CurrentHitPoints + "/" + Player.player.MaximumHitPoints + "HP" + " > ");
+                Console.Write(Player.player.CurrentHitPoints + "/" + Player.player.MaximumHitPoints + " Hp" + " >");
+                string userInput = Console.ReadLine();
 
-                string playerInput = Console.ReadLine();
-
-                if (string.IsNullOrEmpty(playerInput))
+                if (string.IsNullOrWhiteSpace(userInput))
                 {
                     continue;
                 }
 
-                string exitInput = playerInput.ToLower();
+                string exitInput = userInput.ToLower();
 
                 if (exitInput == "exit")
                 {
@@ -70,7 +69,6 @@ namespace MonstersSuchAsUs
 
             Console.WriteLine("");
         }
-        
 
     }
 }

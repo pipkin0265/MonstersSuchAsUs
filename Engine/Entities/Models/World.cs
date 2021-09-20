@@ -10,13 +10,8 @@ namespace Engine
 {
     public static class World
     {
-        // Holds the objects of mobs
         public static readonly List<Monster> Monsters = new List<Monster>();
-
-        // Holds the objects of rooms
         public static readonly List<Room> Location = new List<Room>();
-
-        //  Holds the objects of weapons
         public static readonly List<IWeapon> Weapons = new List<IWeapon>();
 
         // Search code for mobs
