@@ -19,13 +19,13 @@ Waiting Room
 Littered with bones this room is the first entrance in the Hospital of Dead.
 3
 4
-2
--1
+1
+8
 1
 404
 Elevator
 There are two buttons, the first floor is not lit but the second floor is.
--1
+13
 -1
 2
 -1
@@ -62,3 +62,107 @@ It is partially dark in here but it is not messy.
 -1
 -1
 1
+409
+Emergency Room
+It is partially dark in here but it is not messy.
+-1
+9
+-1
+2
+2
+410
+Erie Hallway
+It is partially dark in here but it is not messy.
+10
+11
+12
+8
+1
+411
+Patient Room 1
+It is partially dark in here but it is not messy.
+-1
+-1
+9
+-1
+1
+412
+Patient Room 2
+It is partially dark in here but it is not messy.
+-1
+9
+-1
+-1
+-1
+413
+Patient Room 3
+It is partially dark in here but it is not messy.
+9
+-1
+-1
+-1
+-1
+414
+2nd Floor Waiting Room
+It is partially dark in here but it is not messy.
+-1
+14
+3
+18
+-1
+415
+Long Hallway
+It is partially dark in here but it is not messy.
+-1
+13
+-1
+16
+-1
+416
+Surgical Room
+This is where they did surgery at and a red light is blinking very frequently.
+-1
+-1
+16
+-1
+1
+417
+Test Room
+Looks like a bunch of machinces that were used for testing are in here.
+15
+14
+17
+-1
+-1
+418
+Cancer Unit
+It is partially dark in here but it is not messy.
+16
+-1
+-1
+-1
+1
+419
+Dark Foggy Long Hallway
+It is very chilly in this hallway and very hard to see whats in front of me.
+19
+-1
+-1
+13
+-1
+420
+Small Dark Room
+Dead computers around the room with a red light flashing from the vault door that looks to be broken into... or out of?
+20
+-1
+18
+-1
+-1
+421
+Mortuary
+Ohhh no I think that is the Brood Queen! Be careful!!!
+-1
+-1
+19
+-1
+5
