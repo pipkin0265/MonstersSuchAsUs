@@ -89,6 +89,7 @@
     <Content Include="TextDocs\Weapons.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Combat\" />
     <Folder Include="Commands\Admin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
