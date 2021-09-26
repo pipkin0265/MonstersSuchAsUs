@@ -47,6 +47,13 @@
     <Compile Include="Create, Load, Save\WelcomingScreen.cs" />
     <Compile Include="Entities\Models\Movement.cs" />
     <Compile Include="Entities\Models\RandomNumberGen.cs" />
+    <Compile Include="Items, Weapons, Treasure\AutoAim.cs" />
+    <Compile Include="Items, Weapons, Treasure\BookBag.cs" />
+    <Compile Include="Items, Weapons, Treasure\ExtraLife.cs" />
+    <Compile Include="Items, Weapons, Treasure\MonsterCrystal.cs" />
+    <Compile Include="Items, Weapons, Treasure\PolkaDotFeathers.cs" />
+    <Compile Include="Items, Weapons, Treasure\RubberChickenArmor.cs" />
+    <Compile Include="Items, Weapons, Treasure\Slo_Bro_Shoes.cs" />
     <Compile Include="Locations\CurrentLocationClass.cs" />
     <Compile Include="Locations\Location.cs" />
     <Compile Include="Locations\Quest.cs" />
