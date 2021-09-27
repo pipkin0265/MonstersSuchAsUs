@@ -2,6 +2,7 @@
 Sword
 Swords
 A average size rusty sword
+0
 1D4
 Slash
 true
@@ -10,6 +11,7 @@ true
 Dagger
 Daggers
 Short piece of sharp metal
+1
 1D4
 Pierce
 true
@@ -18,6 +20,7 @@ true
 Hand gun
 Dual wield
 A hand gun
+50
 1D6
 Impact
 true
@@ -26,7 +29,80 @@ true
 Auto Rifle
 Dual wield auto rifles
 A great condition AR
+75
 1D8
 Impact
+true
+0
+105
+Axe
+Axess
+A worn axe
+3
+1D4
+Slash
+true
+0
+106
+Scythe
+Scythes
+A sharp melee weapon
+0
+1D4
+Slash
+true
+5
+107
+Shotgun
+Shotguns
+A great condition buck shotgun
+75
+1D8
+Impact
+true
+0
+108
+Cleaver
+Cleavers
+A fast sharp melee weapon
+10
+1D4
+Slash
+true
+0
+109
+Bat
+Bats
+A great condition bat
+0
+1D4
+Blunt
+true
+0
+110
+Police Baton
+Police Batons
+Military grade 
+6
+1D4
+Blunt
+true
+0
+111
+Sickle
+Sickles
+A very sharp and fast melee weapon 
+10
+1D4
+Slash
+true
+0
+112
+Sledgehammer
+Sledgehammers
+A heavy and blunt melee weapon
+0
+1D4
+Slash
 true
 0

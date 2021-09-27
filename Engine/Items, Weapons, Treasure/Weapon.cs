@@ -12,6 +12,7 @@ namespace Engine
         private string _name;
         private string _damage;
         private string _damagetype;
+        private int _cost;
 
         public int ID { get; set; }
         public string Name { get; set; }
@@ -21,13 +22,15 @@ namespace Engine
         public int WearLocation { get; set; }
         public string Description { get; set; }
         public bool Equip { get; set; }
+        public int Price { get; set; }
 
-        public Weapon(int id, string name, string pluralName, string desc, string damage, string damageType, bool equip, int wearLocation)
+        public Weapon(int id, string name, string pluralName, string desc, int cost, string damage, string damageType, bool equip, int wearLocation)
         {
             this.ID = id;
             this.Name = name;
             this.PluralName = pluralName;
             this.Description = desc;
+            this.Price = cost;
             this.Damage = damage;
             this.DamageType = damageType;
             this.Equip = equip;

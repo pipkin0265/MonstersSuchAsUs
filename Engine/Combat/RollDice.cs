@@ -27,9 +27,22 @@ namespace Engine
             DiceSize = die;
         }
 
-        private void Roll()
+        public RollDice(int Num, int Size)
         {
-            throw new NotImplementedException();
+            DiceNum = Num;
+            DiceSize = Size;
+        }
+
+        public int Roll()
+        {
+            int sum = 0;
+
+            for (int i = 0; i < _diceNum; i++)
+            {
+                sum += random.Next(_sizeDice + 1);
+            }
+
+            return sum;
         }
     }
 }

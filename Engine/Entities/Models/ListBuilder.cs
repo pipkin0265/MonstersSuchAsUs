@@ -79,13 +79,13 @@ namespace Engine
                     string name = reader.ReadLine();
                     string pluralName = reader.ReadLine();
                     string descript = reader.ReadLine();
-                   // cost
+                    int cost = int.Parse(reader.ReadLine());
                     string damage = reader.ReadLine();
                     string type = reader.ReadLine();
                     bool equip = bool.Parse(reader.ReadLine());
                     int wearLocation = int.Parse(reader.ReadLine());
 
-                    World.Weapons.Add(new Weapon(id, name, pluralName, descript, damage, type, equip, wearLocation));
+                    World.Weapons.Add(new Weapon(id, name, pluralName, descript, cost, damage, type, equip, wearLocation));
                 }
             }
         }

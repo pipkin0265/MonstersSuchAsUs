@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Combat\Combat.cs" />
+    <Compile Include="Commands\Admin\Attack.cs" />
     <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\Equip.cs" />
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\PlayerMovement.cs" />
     <Compile Include="Create, Load, Save\WelcomingScreen.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="Items, Weapons, Treasure\AutoAim.cs" />
     <Compile Include="Items, Weapons, Treasure\BookBag.cs" />
     <Compile Include="Items, Weapons, Treasure\ExtraLife.cs" />
+    <Compile Include="Items, Weapons, Treasure\InventorySpace.cs" />
     <Compile Include="Items, Weapons, Treasure\MonsterCrystal.cs" />
     <Compile Include="Items, Weapons, Treasure\PolkaDotFeathers.cs" />
     <Compile Include="Items, Weapons, Treasure\RubberChickenArmor.cs" />
@@ -90,8 +93,6 @@
     <Content Include="TextDocs\Rooms.txt" />
     <Content Include="TextDocs\Weapons.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
