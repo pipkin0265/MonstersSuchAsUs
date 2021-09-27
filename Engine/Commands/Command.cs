@@ -44,6 +44,9 @@ namespace Engine
                 case "west":
                     PlayerMovement.RelocateTo(verb);
                     break;
+                case "attack":
+                    Attack.MakeAttack(noun, Player.player);
+                    break;
             }
         }
     }

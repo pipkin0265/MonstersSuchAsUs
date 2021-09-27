@@ -41,13 +41,13 @@ namespace Engine
             this.LocationToWest = exit4;
 
             // Adds Monsters
-            if (monsterID != 5)
+            if (monsterID != 15) // 15 = Jasmine / The Mother
             {
                 if (monsterID > -1)
                 {
                     Random rand = new Random();
 
-                    int catchMob = RandomNumberGen.RandomNumber(0, 3); // index
+                    int catchMob = RandomNumberGen.RandomNumber(0, 14); // index
                     this.RoomMonsters = new Monster(World.Monsters[catchMob]);
                     this.Mob.Add(RoomMonsters);
                 }
