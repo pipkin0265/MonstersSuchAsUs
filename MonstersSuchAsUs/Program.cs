@@ -10,13 +10,16 @@ namespace MonstersSuchAsUs
 {
     public class Program
     {
+
         private static void Main(string[] args)
         {
             #region Start
             Console.ForegroundColor = ConsoleColor.Magenta;         // Makes text color purple
 
-            ListBuilder.BuildObjects();                             // Calling ListBuilder on load to build all our list
-
+            //ListBuilder.BuildObjects();                             // Calling ListBuilder on load to build all our list
+               
+            SqliteDataAccess.BuildWorld();
+            //SqliteDataAccess.GetWeapon();
             WelcomingScreen welcoming = new WelcomingScreen();      // Welcoming screen
             welcoming.Welcome();
 
