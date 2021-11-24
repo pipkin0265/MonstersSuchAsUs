@@ -86,12 +86,11 @@
     <Compile Include="Entities\Models\Player.cs" />
     <Compile Include="Entities\Models\SaveData.cs" />
     <Compile Include="Entities\Models\World.cs" />
-    <Compile Include="Items, Weapons, Treasure\HealingPotion.cs" />
+    <Compile Include="Items, Weapons, Treasure\Potion.cs" />
     <Compile Include="Items, Weapons, Treasure\IEquip.cs" />
     <Compile Include="Items, Weapons, Treasure\IItem.cs" />
     <Compile Include="Items, Weapons, Treasure\Item.cs" />
     <Compile Include="Items, Weapons, Treasure\IWeapon.cs" />
-    <Compile Include="Items, Weapons, Treasure\StrengthPotion.cs" />
     <Compile Include="Items, Weapons, Treasure\Weapon.cs" />
     <Compile Include="Locations\Room.cs" />
     <Compile Include="Password\Password.cs" />
