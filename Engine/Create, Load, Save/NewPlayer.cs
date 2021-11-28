@@ -19,8 +19,9 @@ namespace Engine
                 Console.WriteLine("Are you a new player? Yes or No?");
                 Console.Write("> ");
                 userInput = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-                if(userInput.ToLower() == "no")
+                if (userInput.ToLower() == "no")
                 {
                     validInput = true;
                     Console.WriteLine("What was your character's name?");
