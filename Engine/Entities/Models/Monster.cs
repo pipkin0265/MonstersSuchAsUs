@@ -17,7 +17,7 @@ namespace Engine
         private int _baseAttack;
         private bool _isDead;
 
-        public int ID { get { return _id; } set { _id = value;  } }
+        public int ID { get { return _id; } set { _id = value; } }
         public string Name { get { return _name; } set { _name = value; } }
         public int Experience { get { return _experience; } set { _experience = value; } }
         public int Gold { get { return gold; } set { gold = value; } }
@@ -25,7 +25,7 @@ namespace Engine
         public string Damage { get { return _damage; } set { _damage = value; } }
         public int BaseAttack { get { return _baseAttack; } set { _baseAttack = value; } }
 
-        public Monster(int id, string name, int xp, int gold, int armor, string damage, int baseAttack, int mobHitpoints, int mobMaxHitpoints, bool mobIsDead, bool canBeAttacked):
+        public Monster(int id, string name, int xp, int gold, int armor, string damage, int baseAttack, int mobHitpoints, int mobMaxHitpoints, bool mobIsDead, bool canBeAttacked) :
             base(mobHitpoints, mobMaxHitpoints, mobIsDead, canBeAttacked)
         {
             this.ID = id;
@@ -53,5 +53,11 @@ namespace Engine
             this.MaximumHitPoints = m.MaximumHitPoints;
             this._isDead = m._isDead;
         }
+
+
+
+
     }
+
+    
 }

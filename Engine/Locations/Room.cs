@@ -57,5 +57,10 @@ namespace Engine
                 this.Mob.Add(World.MonsterID(monsterID));
             }
         }
+        public Room()
+        {
+
+        }
+
     }
 }

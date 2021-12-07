@@ -11,11 +11,14 @@ using Dapper;
 namespace Engine
 {
     public class SqliteDataAccess
-    { public static void BuildWorld()
+    { 
+        public static void BuildWorld()
         {
             LoadItems();
             GetTreasure();
-            GetWeapon();
+            World.Weapons = GetWeapon();
+            GetPotions();
+   
         }
         public static List<Item> LoadItems()
         {
@@ -26,15 +29,7 @@ namespace Engine
                 return output.ToList();
             }
         }
-        public List<Item> SaveItems(Item item)
-        {
-            using (IDbConnection conn = new SQLiteConnection(LoadConncectionString()))
-            {
-                conn.Execute("", item);
-                var output = conn.Query<Item>("select * from Items", new DynamicParameters());
-                return output.ToList();
-            }
-        }
+
 
         public static List<Item> GetTreasure()
         {
@@ -46,15 +41,7 @@ namespace Engine
             }
         }
 
-        public List<Item> SaveTreasure(Item Treasure)
-        {
-            using (IDbConnection conn = new SQLiteConnection(LoadConncectionString()))
-            {
-                conn.Execute("", Treasure);
-                var output = conn.Query<Item>("select * from Treasure", new DynamicParameters());
-                return output.ToList();
-            }
-        }
+
 
         public static List<Weapon> GetWeapon()
         {
@@ -74,6 +61,27 @@ namespace Engine
                 return output.ToList();
             }
         }
+        public static List<Monster> GetMonsters()
+        {
+            using (IDbConnection conn = new SQLiteConnection(LoadConncectionString()))
+            {
+                var output = conn.Query<Monster>("select * from Monsters", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
+        public static List<Room> GetRooms()
+        {
+            using (IDbConnection conn = new SQLiteConnection(LoadConncectionString()))
+            {
+
+                var output = conn.Query<Room>("select * from Rooms", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
+
+
         public static string LoadConncectionString(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;

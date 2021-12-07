@@ -70,24 +70,24 @@ namespace Engine
                 }
             }
 
-            // Build Weapons
-            using (StreamReader reader = File.OpenText(@"../../../Engine/TextDocs/Weapons.txt"))
-            {
-                while (!reader.EndOfStream)
-                {
-                    int id = int.Parse(reader.ReadLine());
-                    string name = reader.ReadLine();
-                    string pluralName = reader.ReadLine();
-                    string descript = reader.ReadLine();
-                    int cost = int.Parse(reader.ReadLine());
-                    string damage = reader.ReadLine();
-                    string type = reader.ReadLine();
-                    bool equip = bool.Parse(reader.ReadLine());
-                    int wearLocation = int.Parse(reader.ReadLine());
+            //// Build Weapons
+            //using (StreamReader reader = File.OpenText(@"../../../Engine/TextDocs/Weapons.txt"))
+            //{
+            //    while (!reader.EndOfStream)
+            //    {
+            //        int id = int.Parse(reader.ReadLine());
+            //        string name = reader.ReadLine();
+            //        string pluralName = reader.ReadLine();
+            //        string descript = reader.ReadLine();
+            //        int cost = int.Parse(reader.ReadLine());
+            //        string damage = reader.ReadLine();
+            //        string type = reader.ReadLine();
+            //        bool equip = bool.Parse(reader.ReadLine());
+            //        int wearLocation = int.Parse(reader.ReadLine());
 
-                    World.Weapons.Add(new Weapon(id, name, pluralName, descript, cost, damage, type, equip, wearLocation));
-                }
-            }
+            //        World.Weapons.Add(new Weapon(id, name, pluralName, descript, cost, damage, type, equip, wearLocation));
+            //    }
+            //}
         }
     }
 }

@@ -36,5 +36,9 @@ namespace Engine
             this.Equip = equip;
             this.WearLocation = wearLocation;
         }
+        public Weapon()
+        {
+
+        }
     }
 }

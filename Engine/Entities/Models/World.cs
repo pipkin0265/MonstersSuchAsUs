@@ -12,7 +12,7 @@ namespace Engine
     {
         public static readonly List<Monster> Monsters = new List<Monster>();
         public static readonly List<Room> Location = new List<Room>();
-        public static readonly List<IWeapon> Weapons = new List<IWeapon>();
+        public static List<Weapon> Weapons = new List<Weapon>();
 
         // Search code for mobs
         public static Monster MonsterID(int id)
